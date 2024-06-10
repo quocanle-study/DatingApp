@@ -7,8 +7,8 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-//import com.quocanle.letbefrienddatingapp.Login.Login;
-//import com.quocanle.letbefrienddatingapp.Login.RegisterBasicInfo;
+import com.quocanle.letbefrienddatingapp.Login.Login;
+import com.quocanle.letbefrienddatingapp.Login.RegisterBasicInfo;
 import com.quocanle.letbefrienddatingapp.R;
 
 public class IntroductionMain extends AppCompatActivity {
@@ -23,29 +23,29 @@ public class IntroductionMain extends AppCompatActivity {
 
         signupButton = findViewById(R.id.signup_button);
 
-//        signupButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                openEmailAddressEntryPage();
-//            }
-//        });
+        signupButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openEmailAddressEntryPage();
+            }
+        });
 
         loginButton = findViewById(R.id.login_button);
-//        loginButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                openLoginPage();
-//            }
-//        });
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openLoginPage();
+            }
+        });
     }
 
-//    public void openLoginPage() {
-//        Intent intent = new Intent(this, Login.class);
-//        startActivity(intent);
-//    }
-//
-//    public void openEmailAddressEntryPage() {
-//        Intent intent = new Intent(this, RegisterBasicInfo.class);
-//        startActivity(intent);
-//    }
+    public void openLoginPage() {
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
+    }
+
+    public void openEmailAddressEntryPage() {
+        Intent intent = new Intent(this, RegisterBasicInfo.class);
+        startActivity(intent);
+    }
 }

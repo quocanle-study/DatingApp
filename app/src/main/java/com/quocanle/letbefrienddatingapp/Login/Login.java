@@ -13,7 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-//import com.quocanle.letbefrienddatingapp.Main.MainActivity;
+import com.quocanle.letbefrienddatingapp.Main.MainActivity;
 import com.quocanle.letbefrienddatingapp.R;
 
 
@@ -59,8 +59,8 @@ public class Login extends AppCompatActivity {
                     Toast.makeText(mContext, "You must fill out all the fields", Toast.LENGTH_SHORT).show();
                 } else {
 
-//                    Intent intent = new Intent(Login.this, MainActivity.class);
-//                    startActivity(intent);
+                    Intent intent = new Intent(Login.this, MainActivity.class);
+                    startActivity(intent);
                 }
             }
         });
@@ -70,8 +70,8 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "onClick: navigating to register screen");
-//                Intent intent = new Intent(Login.this, RegisterBasicInfo.class);
-//                startActivity(intent);
+                Intent intent = new Intent(Login.this, RegisterBasicInfo.class);
+                startActivity(intent);
             }
         });
 
