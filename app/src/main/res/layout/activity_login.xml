@@ -25,22 +25,20 @@
                 android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="30dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp">
 
 <!--                <ImageView-->
 <!--                    android:layout_width="60dp"-->
 <!--                    android:layout_height="60dp"-->
 <!--                    android:layout_gravity="center_horizontal"-->
 <!--                    android:background="@drawable/logo" />-->
-
-                <com.quocanle.letbefrienddatingapp.customfonts.MyTextView_GreatVibes_Regular
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginLeft="40dp"
-                    android:text="Luxury Boys Dating"
-                    android:textColor="#ff0b00"
-                    android:textSize="30dp" />
+                    android:src="@drawable/image1"
+                    >
+                </ImageView>
 
             </RelativeLayout>
 
