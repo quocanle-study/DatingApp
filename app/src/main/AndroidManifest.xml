@@ -39,6 +39,10 @@
         <activity android:name=".Login.RegisterGender"></activity>
         <activity android:name=".Login.RegisterGenderPrefection"></activity>
         <activity android:name=".Login.RegisterHobby"></activity>
+        <activity android:name=".Main.MainActivity"/>
+        <activity android:name=".Main.ProfileCheckinMain" />
+        <activity android:name=".Main.BtnLikeActivity" />
+        <activity android:name=".Main.BtnDislikeActivity"/>
 
     </application>
 
