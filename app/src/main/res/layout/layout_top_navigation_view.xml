@@ -3,15 +3,15 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="@drawable/white_grey_border_bottom">
+        android:layout_height="50dp">
 
         <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
             android:id="@+id/topNavViewBar"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="match_parent"
             android:layout_gravity="bottom"
-            app:menu="@menu/top_navigation_toolbar">
+            app:menu="@menu/top_navigation_toolbar"
+            android:background="@color/colorPrimary">
 
         </com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx>
 
