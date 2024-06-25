@@ -33,8 +33,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Login.Login" />
-        <activity android:name=".Login.RegisterBasicInfo" />
+        <activity android:name=".Login.Login"></activity>
+        <activity android:name=".Login.RegisterBasicInfo"></activity>
+        <activity android:name=".Login.RegisterAge"></activity>
+        <activity android:name=".Login.RegisterGender"></activity>
+        <activity android:name=".Login.RegisterGenderPrefection"></activity>
+        <activity android:name=".Login.RegisterHobby"></activity>
         <activity android:name=".Main.MainActivity"/>
         <activity android:name=".Main.ProfileCheckinMain" />
         <activity android:name=".Main.BtnLikeActivity" />
