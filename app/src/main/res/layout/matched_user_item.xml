@@ -21,7 +21,7 @@
         android:layout_gravity="center_vertical"
         android:orientation="vertical">
 
-        <com.quintus.labs.datingapp.customfonts.MyTextView_Roboto_Bold
+        <com.quocanle.letbefrienddatingapp.customfonts.MyTextView_Roboto_Bold
             android:id="@+id/mui_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

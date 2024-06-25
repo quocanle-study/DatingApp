@@ -13,7 +13,7 @@
             android:layout_marginLeft="20dp"
             android:background="@drawable/ic_chevron_left_black_24dp" />
 
-        <com.quintus.labs.datingapp.customfonts.MyTextView_Roboto_Bold
+        <com.quocanle.letbefrienddatingapp.customfonts.MyTextView_Roboto_Bold
             android:id="@+id/toolbartag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
