@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content">
 
 
-                <com.quintus.labs.datingapp.Utils.SquareImageView
+                <com.quocanle.letbefrienddatingapp.Utils.SquareImageView
                     android:id="@+id/profileImage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

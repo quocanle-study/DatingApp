@@ -36,7 +36,7 @@ public class MainActivity extends Activity {
     List<Cards> rowItems;
     FrameLayout cardFrame, moreFrame;
     private Context mContext = MainActivity.this;
-//    private NotificationHelper mNotificationHelper;
+    private NotificationHelper mNotificationHelper;
     private Cards cards_data[];
     private PhotoAdapter arrayAdapter;
 
@@ -51,7 +51,7 @@ public class MainActivity extends Activity {
         // start pulsator
         PulsatorLayout mPulsator = findViewById(R.id.pulsator);
         mPulsator.start();
-//        mNotificationHelper = new NotificationHelper(this);
+        mNotificationHelper = new NotificationHelper(this);
 
 
         setupTopNavigationView();
@@ -86,41 +86,41 @@ public class MainActivity extends Activity {
         }
     }
 
-//    private void updateLocation() {
-//
-//        if (ContextCompat.checkSelfPermission(this,
-//                Manifest.permission.ACCESS_FINE_LOCATION)
-//                != PackageManager.PERMISSION_GRANTED) {
-//
-//            ActivityCompat.requestPermissions(this,
-//                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-//                    MY_PERMISSIONS_REQUEST_LOCATION);
-//        } else {
-//
-//        }
-//    }
+    private void updateLocation() {
 
-//    @Override
-//    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-//        switch (requestCode) {
-//            case MY_PERMISSIONS_REQUEST_LOCATION: {
-//                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-//
-//                    if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
-//                            == PackageManager.PERMISSION_GRANTED) {
-//
-//                        updateLocation();
-//                    } else {
-//                        Toast.makeText(MainActivity.this, "Location Permission Denied. You have to give permission inorder to know the user range ", Toast.LENGTH_SHORT)
-//                                .show();
-//                    }
-//                }
-//            }
-//
-//            default:
-//                super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-//        }
-//    }
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                    MY_PERMISSIONS_REQUEST_LOCATION);
+        } else {
+
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        switch (requestCode) {
+            case MY_PERMISSIONS_REQUEST_LOCATION: {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                            == PackageManager.PERMISSION_GRANTED) {
+
+                        updateLocation();
+                    } else {
+                        Toast.makeText(MainActivity.this, "Location Permission Denied. You have to give permission inorder to know the user range ", Toast.LENGTH_SHORT)
+                                .show();
+                    }
+                }
+            }
+
+            default:
+                super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+    }
 
     private void updateSwipeCard() {
         final SwipeFlingAdapterView flingContainer = findViewById(R.id.frame);
@@ -174,11 +174,11 @@ public class MainActivity extends Activity {
     }
 
 
-//    public void sendNotification() {
-//        NotificationCompat.Builder nb = mNotificationHelper.getChannel1Notification(mContext.getString(R.string.app_name), mContext.getString(R.string.match_notification));
-//
-//        mNotificationHelper.getManager().notify(1, nb.build());
-//    }
+    public void sendNotification() {
+        NotificationCompat.Builder nb = mNotificationHelper.getChannel1Notification(mContext.getString(R.string.app_name), mContext.getString(R.string.match_notification));
+
+        mNotificationHelper.getManager().notify(1, nb.build());
+    }
 
 
     public void DislikeBtn(View v) {
