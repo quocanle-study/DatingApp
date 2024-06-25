@@ -52,7 +52,7 @@ public class MainActivity extends Activity {
         PulsatorLayout mPulsator = findViewById(R.id.pulsator);
         mPulsator.start();
 //        mNotificationHelper = new NotificationHelper(this);
-
+        
 
         setupTopNavigationView();
 
@@ -232,6 +232,5 @@ public class MainActivity extends Activity {
     public void onBackPressed() {
 
     }
-
 
 }

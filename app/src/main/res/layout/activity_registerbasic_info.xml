@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true">
 
 <!--    <TextView-->
 <!--        android:id="@+id/numberOfPagesLeft"-->
@@ -34,7 +35,8 @@
                 android:layout_gravity="center"
                 android:layout_margin="20dp"
                 android:layout_marginBottom="30dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
 
 <!--                <ImageView-->
 <!--                    android:layout_width="60dp"-->
@@ -59,7 +61,9 @@
                 android:orientation="vertical"
                 android:paddingLeft="25dp"
                 android:paddingTop="55dp"
-                android:paddingRight="25dp">
+                android:paddingRight="25dp"
+                android:layout_marginVertical="20dp"
+                android:layout_centerVertical="true">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -67,41 +71,26 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="20dp"
-                    android:text="Lets get an account"
+                    android:text="Let's Join Us"
                     android:textColor="#747474"
                     android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:gravity="center" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:gravity="bottom">
+                    android:gravity="bottom"
+                    android:layout_marginVertical="10dp">
 
                     <EditText
                         android:id="@+id/input_email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/edit_text_focused_bg"
-                        android:hint="entry your Email"
-                        android:inputType="textEmailAddress"
-                        android:padding="15dp" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:gravity="bottom">
-
-                    <EditText
-                        android:id="@+id/input_username"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/edit_text_focused_bg"
-                        android:hint="enter your username "
+                        android:hint="Email"
                         android:inputType="textEmailAddress"
                         android:padding="15dp" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -112,14 +101,33 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     android:gravity="bottom"
-                    app:passwordToggleEnabled="true">
+                    android:layout_marginVertical="10dp">
+
+                    <EditText
+                        android:id="@+id/input_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_focused_bg"
+                        android:hint="Username"
+                        android:inputType="textEmailAddress"
+                        android:padding="15dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="bottom"
+                    app:passwordToggleEnabled="true"
+                    android:layout_marginVertical="10dp">
 
                     <EditText
                         android:id="@+id/input_password"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/edit_text_focused_bg"
-                        android:hint="enter your Password"
+                        android:hint="Password"
                         android:inputType="textPassword"
                         android:padding="15dp" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -130,7 +138,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="25dp"
-                    android:layout_marginBottom="25dp"
                     android:background="@color/colorPrimary"
                     android:padding="12dp"
                     android:text="Continue"
