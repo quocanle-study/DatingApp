@@ -55,7 +55,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:text="Santosh Kumar"
+                android:text="User Name"
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />
 

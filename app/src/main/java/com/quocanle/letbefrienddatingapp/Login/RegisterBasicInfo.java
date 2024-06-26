@@ -11,8 +11,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.quocanle.letbefrienddatingapp.Firebase.FirebaseLoginHelper;
 import com.quocanle.letbefrienddatingapp.R;
 import com.quocanle.letbefrienddatingapp.Utils.GPS;
 import com.quocanle.letbefrienddatingapp.Utils.User;
@@ -65,9 +70,10 @@ public class RegisterBasicInfo extends AppCompatActivity {
                     }
                     Log.d("Location==>", longtitude + "   " + latitude);
 
+                    FirebaseLoginHelper.getInstance().checkIfEmailExists(email, RegisterBasicInfo.this);
 
                     Intent intent = new Intent(RegisterBasicInfo.this, RegisterGender.class);
-                    User user = new User("", "", "", "", email, username, false, false, false, false, "", "", "", latitude, longtitude);
+                    User user = new User("", "", email, username, false, false, false, false, "", "", "", "", "", 0, 0, "", "", "", "", false, false);
                     intent.putExtra("password", password);
                     intent.putExtra("classUser", user);
                     startActivity(intent);
@@ -89,7 +95,6 @@ public class RegisterBasicInfo extends AppCompatActivity {
             return false;
 
         }
-
 
         return true;
     }

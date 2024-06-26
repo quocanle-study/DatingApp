@@ -11,9 +11,12 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.SignInMethodQueryResult;
 import com.google.firebase.database.DatabaseError;
 import com.quocanle.letbefrienddatingapp.Utils.User;
 import com.google.firebase.database.DatabaseReference;
+
+import java.util.List;
 
 public class FirebaseLoginHelper {
     private static final String TAG = "EmailPassword";
@@ -33,6 +36,28 @@ public class FirebaseLoginHelper {
 
     public FirebaseUser getFirebaseCurrentUser() {
         return mAuth.getCurrentUser();
+    }
+
+    public void checkIfEmailExists(String email, Activity activity) {
+        FirebaseAuth.getInstance().fetchSignInMethodsForEmail(email)
+                .addOnCompleteListener(activity, new OnCompleteListener<SignInMethodQueryResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<SignInMethodQueryResult> task) {
+                        if (task.isSuccessful()) {
+                            SignInMethodQueryResult result = task.getResult();
+                            List<String> signInMethods = result.getSignInMethods();
+                            if (signInMethods != null && !signInMethods.isEmpty()) {
+                                // The email exists, do something
+                                Log.d(TAG, "Email already registered with " + signInMethods.get(0));
+                            } else {
+                                // The email does not exist, do something else
+                                Log.d(TAG, "Email not registered");
+                            }
+                        } else {
+                            Log.e(TAG, "Error checking if email exists", task.getException());
+                        }
+                    }
+                });
     }
 
     public void createAccount(String email, String password, Activity activity, OnCompleteListener<AuthResult> listener) {
@@ -106,6 +131,10 @@ public class FirebaseLoginHelper {
 //        }
 //    }
 
+    public String getUid() {
+        return mAuth.getCurrentUser().getUid();
+    }
+
     public interface OnUserFetchedListener {
         void onUserFetched(User user);
     }
@@ -143,6 +172,7 @@ public class FirebaseLoginHelper {
                     user.setMusic(userSuccess.isMusic());
                     user.setSports(userSuccess.isSports());
                     user.setTravel(userSuccess.isTravel());
+                    user.setFishing(userSuccess.isFishing());
 
                     listener.onUserFetched(user);
                 }
