@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 
+import com.quocanle.letbefrienddatingapp.Firebase.FirebaseLoginHelper;
 import com.quocanle.letbefrienddatingapp.Introduction.IntroductionMain;
 import com.quocanle.letbefrienddatingapp.R;
 import com.yahoo.mobile.client.android.util.rangeseekbar.RangeSeekBar;
@@ -20,7 +21,7 @@ public class SettingsActivity extends AppCompatActivity {
     SeekBar distance;
     SwitchCompat man, woman;
     RangeSeekBar rangeSeekBar;
-    TextView gender, distance_text, age_rnge;
+    TextView gender, distance_text, age_rnge, logoutButton;
 
 
     @Override
@@ -38,6 +39,7 @@ public class SettingsActivity extends AppCompatActivity {
         distance_text = findViewById(R.id.distance_text);
         age_rnge = findViewById(R.id.age_range);
         rangeSeekBar = findViewById(R.id.rangeSeekbar);
+        logoutButton = findViewById(R.id.logout_button);
 
 
         distance.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -88,6 +90,13 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
+        logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseLoginHelper.getInstance().logOut();
+                Logout(v);
+            }
+        });
 
     }
 

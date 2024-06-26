@@ -26,9 +26,14 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.core.app.ActivityCompat;
 
+import com.google.firebase.database.DatabaseError;
+import com.quocanle.letbefrienddatingapp.Firebase.FirebaseLoginHelper;
+import com.quocanle.letbefrienddatingapp.Firebase.FirestoreDatabaseHelper;
 import com.quocanle.letbefrienddatingapp.R;
+import com.quocanle.letbefrienddatingapp.Utils.User;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -41,6 +46,8 @@ public class EditProfileActivity extends AppCompatActivity {
     private static final int PERMISSION_CALLBACK_CONSTANT = 100;
     //firebase
     private static final int REQUEST_PERMISSION_SETTING = 101;
+    User user;
+    FirestoreDatabaseHelper databaseHelper;
     Button man, woman;
     ImageButton back;
     TextView man_text, women_text;
@@ -56,6 +63,8 @@ public class EditProfileActivity extends AppCompatActivity {
     private Uri resultUri;
     private String userSex;
     private EditText phoneNumber, aboutMe;
+    private EditText abYou, jobTitle, company, school;
+    private SwitchCompat dontShowMyAge, makeMyDistanceInvisible;
     private CheckBox sportsCheckBox, travelCheckBox, musicCheckBox, fishingCheckBox;
     private boolean isSportsClicked = false;
     private boolean isTravelClicked = false;
@@ -67,10 +76,41 @@ public class EditProfileActivity extends AppCompatActivity {
     private int REQUEST_CAMERA = 0, SELECT_FILE = 1;
     private String userChoosenTask;
 
+    private void fetching() {
+        abYou.setText(user.getAboutYou());
+        jobTitle.setText(user.getJobTitle());
+        company.setText(user.getCompany());
+        school.setText(user.getSchool());
+        if (user.getSex() != null) {
+            if (user.getSex().equals("Male")) {
+                man.callOnClick();
+            }
+            if (user.getSex().equals("Female")) {
+                woman.callOnClick();
+            }
+        }
+        if (user.isDontShowMyAge() == true) {
+            dontShowMyAge.setChecked(true);
+        }
+        if (user.isMakeMyDistanceInvisible() == true) {
+            makeMyDistanceInvisible.setChecked(true);
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
+
+        databaseHelper = new FirestoreDatabaseHelper(); // Initialize the FirestoreDatabaseHelper object
+
+        FirebaseLoginHelper.getInstance().getCurrentUser(new FirebaseLoginHelper.OnUserFetchedListener() {
+            @Override
+            public void onUserFetched(User user) {
+                EditProfileActivity.this.user = user;
+                fetching();
+            }
+        });
 
         permissionStatus = getSharedPreferences("permissionStatus", MODE_PRIVATE);
         requestMultiplePermissions();
@@ -85,11 +125,26 @@ public class EditProfileActivity extends AppCompatActivity {
         man_text = findViewById(R.id.man_text);
         women_text = findViewById(R.id.woman_text);
         back = findViewById(R.id.back);
+        abYou = findViewById(R.id.ab_you);
+        jobTitle = findViewById(R.id.job_title);
+        company = findViewById(R.id.company);
+        school = findViewById(R.id.school);
+        dontShowMyAge = findViewById(R.id.dont_show_my_age);
+        makeMyDistanceInvisible = findViewById(R.id.make_my_distance_invisible);
+
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
+                user.setAboutYou(abYou.getText().toString());
+                user.setJobTitle(jobTitle.getText().toString());
+                user.setCompany(company.getText().toString());
+                user.setSchool(school.getText().toString());
+                user.setDontShowMyAge(dontShowMyAge.isChecked());
+                user.setMakeMyDistanceInvisible(makeMyDistanceInvisible.isChecked());
+                databaseHelper.writeNewUser(user.getUid(), user);
             }
+
         });
 
         woman.setOnClickListener(new View.OnClickListener() {
@@ -100,6 +155,7 @@ public class EditProfileActivity extends AppCompatActivity {
                 woman.setBackgroundResource(R.drawable.ic_check_select);
                 man_text.setTextColor(R.color.black);
                 man.setBackgroundResource(R.drawable.ic_check_unselect);
+                user.setSex("Female");
             }
         });
 
@@ -111,6 +167,7 @@ public class EditProfileActivity extends AppCompatActivity {
                 man.setBackgroundResource(R.drawable.ic_check_select);
                 women_text.setTextColor(R.color.black);
                 woman.setBackgroundResource(R.drawable.ic_check_unselect);
+                user.setSex("Male");
             }
         });
 

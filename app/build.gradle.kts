@@ -93,6 +93,7 @@ dependencies {
     //glide for cache image
     implementation("com.github.bumptech.glide:glide:4.7.1")
     implementation(libs.firebase.auth)
+    implementation(libs.firebase.firestore)
     annotationProcessor("com.github.bumptech.glide:compiler:4.7.1")
 
 
