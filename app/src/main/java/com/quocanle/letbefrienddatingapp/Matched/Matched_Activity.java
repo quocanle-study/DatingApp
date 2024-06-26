@@ -87,11 +87,11 @@ public class Matched_Activity extends AppCompatActivity {
         usersList.add(users);
         users = new Users("3", "Rose", 27, "https://media-cdn-v2.laodong.vn/storage/newsportal/2022/9/9/1090978/Rose-8B1a.jpg", "Simple and beautiful Girl", "Singing", 400);
         usersList.add(users);
-        users = new Users("4", "Thiều Bảo Trâm", 25, "https://vnn-imgs-f.vgcloud.vn/2021/01/21/08/thieu-bao-tram-la-ai-10.jpg", "dashing girl", "swiming", 1308);
+        users = new Users("4", "Thieu Bao Tram", 25, "https://vnn-imgs-f.vgcloud.vn/2021/01/21/08/thieu-bao-tram-la-ai-10.jpg", "dashing girl", "Son Tung's Ex", 1308);
         matchList.add(users);
-        users = new Users("5", "Hải Tú", 20, "https://thanhnien.mediacdn.vn/Uploaded/thynhm/2021_01_21/133113648_156801309530550_8269644933371586165_o_QKIK.jpg?width=500", "chulbuli nautankibaj ", "Drawing", 1200);
+        users = new Users("5", "Hai Tu", 20, "https://thanhnien.mediacdn.vn/Uploaded/thynhm/2021_01_21/133113648_156801309530550_8269644933371586165_o_QKIK.jpg?width=500", "Wife of Son Tung MTP ", "Drawing", 1200);
         matchList.add(users);
-        users = new Users("6", "Châu Bùi", 21, "https://i.ex-cdn.com/nongnghiep.vn/files/content/2024/06/25/viechannelnala5co-van-chau-bui-2-1684144775776887953850-084624_64-094528.jpg", "Simple and beautiful Girl", "Sleeping", 700);
+        users = new Users("6", "Chau Bui", 21, "https://i.ex-cdn.com/nongnghiep.vn/files/content/2024/06/25/viechannelnala5co-van-chau-bui-2-1684144775776887953850-084624_64-094528.jpg", "I love Binz", "Sleeping", 700);
         matchList.add(users);
         users = new Users("7", "Jisoo", 19, "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/20240226_Kim_Jisoo_%EA%B9%80%EC%A7%80%EC%88%98_02.jpg/250px-20240226_Kim_Jisoo_%EA%B9%80%EC%A7%80%EC%88%98_02.jpg", "Singing girl", "Art", 5000);
         usersList.add(users);

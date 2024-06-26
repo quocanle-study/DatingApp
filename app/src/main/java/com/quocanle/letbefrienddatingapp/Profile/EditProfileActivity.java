@@ -29,7 +29,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 import androidx.core.app.ActivityCompat;
 
-import com.google.firebase.database.DatabaseError;
+
 import com.quocanle.letbefrienddatingapp.Firebase.FirebaseLoginHelper;
 import com.quocanle.letbefrienddatingapp.Firebase.FirestoreDatabaseHelper;
 import com.quocanle.letbefrienddatingapp.R;
