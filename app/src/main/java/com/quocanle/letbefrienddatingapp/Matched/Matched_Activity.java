@@ -68,33 +68,33 @@ public class Matched_Activity extends AppCompatActivity {
     }
 
     private void prepareActiveData() {
-        Users users = new Users("1", "Swati Tripathy", 21, "https://im.idiva.com/author/2018/Jul/shivani_chhabra-_author_s_profile.jpg", "Simple and beautiful Girl", "Acting", 200);
+        Users users = new Users("1", "Jennie", 28, "https://ss-images.saostar.vn/wp700/2024/5/16/pc/1715844290373/i5r0s9zqbw1-peu8rl4jvb2-puyosq83l23.png", "Simple and beautiful Girl", "Singing", 200);
         usersList.add(users);
-        users = new Users("2", "Ananaya Pandy", 20, "https://i0.wp.com/profilepicturesdp.com/wp-content/uploads/2018/06/beautiful-indian-girl-image-for-profile-picture-8.jpg", "cool Minded Girl", "Dancing", 800);
+        users = new Users("2", "Lisa", 29, "https://image.tienphong.vn/w1000/Uploaded/2024/zaugtn/2023_09_11/lisa-1367.jpg", "cool Minded Girl", "Dancing", 800);
         usersList.add(users);
-        users = new Users("3", "Anjali Kasyap", 22, "https://pbs.twimg.com/profile_images/967542394898952192/_M_eHegh_400x400.jpg", "Simple and beautiful Girl", "Singing", 400);
+        users = new Users("3", "Rose", 27, "https://media-cdn-v2.laodong.vn/storage/newsportal/2022/9/9/1090978/Rose-8B1a.jpg", "Simple and beautiful Girl", "Singing", 400);
         usersList.add(users);
-        users = new Users("7", "Sudeshna Roy", 19, "https://talenthouse-res.cloudinary.com/image/upload/c_fill,f_auto,h_640,w_640/v1411380245/user-415406/submissions/hhb27pgtlp9akxjqlr5w.jpg", "Papa's Pari", "Art", 5000);
+        users = new Users("7", "Jisoo", 19, "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/20240226_Kim_Jisoo_%EA%B9%80%EC%A7%80%EC%88%98_02.jpg/250px-20240226_Kim_Jisoo_%EA%B9%80%EC%A7%80%EC%88%98_02.jpg", "Singing girl", "Art", 5000);
         usersList.add(users);
 
         adapter.notifyDataSetChanged();
     }
 
     private void prepareMatchData() {
-        Users users = new Users("1", "Swati Tripathy", 21, "https://im.idiva.com/author/2018/Jul/shivani_chhabra-_author_s_profile.jpg", "Simple and beautiful Girl", "Acting", 200);
+        Users users = new Users("1", "Jennie", 28, "https://ss-images.saostar.vn/wp700/2024/5/16/pc/1715844290373/i5r0s9zqbw1-peu8rl4jvb2-puyosq83l23.png", "Simple and beautiful Girl", "Singing", 200);
+        usersList.add(users);
+        users = new Users("2", "Lisa", 29, "https://image.tienphong.vn/w1000/Uploaded/2024/zaugtn/2023_09_11/lisa-1367.jpg", "cool Minded Girl", "Dancing", 800);
+        usersList.add(users);
+        users = new Users("3", "Rose", 27, "https://media-cdn-v2.laodong.vn/storage/newsportal/2022/9/9/1090978/Rose-8B1a.jpg", "Simple and beautiful Girl", "Singing", 400);
+        usersList.add(users);
+        users = new Users("4", "Thiều Bảo Trâm", 25, "https://vnn-imgs-f.vgcloud.vn/2021/01/21/08/thieu-bao-tram-la-ai-10.jpg", "dashing girl", "swiming", 1308);
         matchList.add(users);
-        users = new Users("2", "Ananaya Pandy", 20, "https://i0.wp.com/profilepicturesdp.com/wp-content/uploads/2018/06/beautiful-indian-girl-image-for-profile-picture-8.jpg", "cool Minded Girl", "Dancing", 800);
+        users = new Users("5", "Hải Tú", 20, "https://thanhnien.mediacdn.vn/Uploaded/thynhm/2021_01_21/133113648_156801309530550_8269644933371586165_o_QKIK.jpg?width=500", "chulbuli nautankibaj ", "Drawing", 1200);
         matchList.add(users);
-        users = new Users("3", "Anjali Kasyap", 22, "https://pbs.twimg.com/profile_images/967542394898952192/_M_eHegh_400x400.jpg", "Simple and beautiful Girl", "Singing", 400);
+        users = new Users("6", "Châu Bùi", 21, "https://i.ex-cdn.com/nongnghiep.vn/files/content/2024/06/25/viechannelnala5co-van-chau-bui-2-1684144775776887953850-084624_64-094528.jpg", "Simple and beautiful Girl", "Sleeping", 700);
         matchList.add(users);
-        users = new Users("4", "Preety Deshmukh", 19, "http://profilepicturesdp.com/wp-content/uploads/2018/07/fb-real-girls-dp-3.jpg", "dashing girl", "swiming", 1308);
-        matchList.add(users);
-        users = new Users("5", "Srutimayee Sen", 20, "https://dp.profilepics.in/profile_pictures/selfie-girls-profile-pics-dp/selfie-pics-dp-for-whatsapp-facebook-profile-25.jpg", "chulbuli nautankibaj ", "Drawing", 1200);
-        matchList.add(users);
-        users = new Users("6", "Dikshya Agarawal", 21, "https://pbs.twimg.com/profile_images/485824669732200448/Wy__CJwU.jpeg", "Simple and beautiful Girl", "Sleeping", 700);
-        matchList.add(users);
-        users = new Users("7", "Sudeshna Roy", 19, "https://talenthouse-res.cloudinary.com/image/upload/c_fill,f_auto,h_640,w_640/v1411380245/user-415406/submissions/hhb27pgtlp9akxjqlr5w.jpg", "Papa's Pari", "Art", 5000);
-        matchList.add(users);
+        users = new Users("7", "Jisoo", 19, "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/20240226_Kim_Jisoo_%EA%B9%80%EC%A7%80%EC%88%98_02.jpg/250px-20240226_Kim_Jisoo_%EA%B9%80%EC%A7%80%EC%88%98_02.jpg", "Singing girl", "Art", 5000);
+        usersList.add(users);
 
         mAdapter.notifyDataSetChanged();
     }
