@@ -45,6 +45,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        String userEmail = getIntent().getStringExtra("userEmail");
 
         cardFrame = findViewById(R.id.card_frame);
         moreFrame = findViewById(R.id.more_frame);

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "35425162060",
+    "project_id": "letbefriend-datingapp-mobile",
+    "storage_bucket": "letbefriend-datingapp-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:35425162060:android:8979f492d42917a3a6f5e9",
+        "android_client_info": {
+          "package_name": "com.quocanle.letbefrienddatingapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxGT874OU7XksD3PTERZ_clxwjlcc0Z_s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
