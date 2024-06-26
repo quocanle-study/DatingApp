@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -21,6 +22,7 @@ import androidx.core.content.ContextCompat;
 
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 import com.lorentzos.flingswipe.SwipeFlingAdapterView;
+import com.quocanle.letbefrienddatingapp.Matched.Matched_Activity;
 import com.quocanle.letbefrienddatingapp.R;
 import com.quocanle.letbefrienddatingapp.Utils.PulsatorLayout;
 import com.quocanle.letbefrienddatingapp.Utils.TopNavigationViewHelper;
@@ -65,13 +67,21 @@ public class MainActivity extends Activity {
         rowItems.add(cards);
         cards = new Cards("3", "Huy Minh Pham Nguyen", 19, "https://raw.githack.com/chunche456/MyAssets/main/img/LetBeFriend/card/huyminhphamnguyen.jpg", "La sinh vien VNUK, ban cua quocan", "Singing", 400);
         rowItems.add(cards);
-        cards = new Cards("4", "Vu Dinh Trong Thang", 21, "https://i.postimg.cc/KvsdkgHj/image.png", "La mot thanh vien ban nhac ngot ...", "Singing", 1308);
+        cards = new Cards("4", "Pham Quang Vinh", 20, "https://scontent.fsgn2-11.fna.fbcdn.net/v/t39.30808-6/438300763_3674330286113806_3777441537352635807_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=c0TOZjcK4VcQ7kNvgFKMKzK&_nc_ht=scontent.fsgn2-11.fna&oh=00_AYAn-bkaeFgrVJhCzkTAr6bV3CWVty90qMW4PMirs-ggew&oe=66822CE9", "The best handome guy in the world", "Listening to music", 1308);
         rowItems.add(cards);
-        cards = new Cards("5", "Vu Dinh Trong Thang", 21, "https://i.postimg.cc/KvsdkgHj/image.png", "La mot thanh vien ban nhac ngot ...", "Singing", 1200);
+        cards = new Cards("5", "Nguyen Minh Nhan", 21, "https://scontent.fsgn2-11.fna.fbcdn.net/v/t39.30808-1/357364288_1443123496513106_2568270581030725050_n.jpg?stp=cp6_dst-jpg_p480x480&_nc_cat=103&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=X-ZaewP_VZ4Q7kNvgHOpZnN&_nc_ht=scontent.fsgn2-11.fna&oh=00_AYB-HYfB6uK9ZKRyKrWa0PPVwZU-8fEXDM7EAmnWGGfDCQ&oe=66825221", "Bad guy like bad girls", "Playing games", 1200);
         rowItems.add(cards);
-        cards = new Cards("6", "Vu Dinh Trong Thang", 21, "https://i.postimg.cc/KvsdkgHj/image.png", "La mot thanh vien ban nhac ngot ...", "Singing", 700);
+        cards = new Cards("6", "Jennie", 28, "https://ss-images.saostar.vn/wp700/2024/5/16/pc/1715844290373/i5r0s9zqbw1-peu8rl4jvb2-puyosq83l23.png", "Simple and beautiful Girl", "Singing", 200);
         rowItems.add(cards);
-        cards = new Cards("7", "Vu Dinh Trong Thang", 21, "https://i.postimg.cc/KvsdkgHj/image.png", "La mot thanh vien ban nhac ngot ...", "Singing", 5000);
+        cards = new Cards("7", "Lisa", 29, "https://image.tienphong.vn/w1000/Uploaded/2024/zaugtn/2023_09_11/lisa-1367.jpg", "cool Minded Girl", "Dancing", 800);
+        rowItems.add(cards);
+        cards = new Cards("8", "Jisoo", 19, "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/20240226_Kim_Jisoo_%EA%B9%80%EC%A7%80%EC%88%98_02.jpg/250px-20240226_Kim_Jisoo_%EA%B9%80%EC%A7%80%EC%88%98_02.jpg", "Singing girl", "Art", 5000);
+        rowItems.add(cards);
+        cards = new Cards("9", "Thieu Bao Tram", 25, "https://vnn-imgs-f.vgcloud.vn/2021/01/21/08/thieu-bao-tram-la-ai-10.jpg", "dashing girl", "swiming", 1308);
+        rowItems.add(cards);
+        cards = new Cards("10", "Hai Tu", 20, "https://thanhnien.mediacdn.vn/Uploaded/thynhm/2021_01_21/133113648_156801309530550_8269644933371586165_o_QKIK.jpg?width=500", "chulbuli nautankibaj ", "Drawing", 1200);
+        rowItems.add(cards);
+        cards = new Cards("11", "Chau Bui", 21, "https://i.ex-cdn.com/nongnghiep.vn/files/content/2024/06/25/viechannelnala5co-van-chau-bui-2-1684144775776887953850-084624_64-094528.jpg", "Simple and beautiful Girl", "Sleeping", 700);
         rowItems.add(cards);
 
         arrayAdapter = new PhotoAdapter(this, R.layout.item, rowItems);
@@ -100,7 +110,6 @@ public class MainActivity extends Activity {
 
         }
     }
-
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         switch (requestCode) {
@@ -204,6 +213,8 @@ public class MainActivity extends Activity {
             String userId = card_item.getUserId();
 
             //check matches
+            sendNotification();
+
 
             rowItems.remove(0);
             arrayAdapter.notifyDataSetChanged();
@@ -213,8 +224,6 @@ public class MainActivity extends Activity {
             startActivity(btnClick);
         }
     }
-
-
     /**
      * setup top tool bar
      */
