@@ -30,22 +30,52 @@ public class User implements Serializable {
     public User() {
     }
 
-    public User(String sex, String preferSex, String Uid, String phone_number, String email, String username, boolean sport, boolean travel, boolean music, boolean fish, String description, String dateOfBirth, String profileImageUrl, double latitude, double longtitude) {
-        this.sex = sex;
-        this.Uid = Uid;
+    public User(User userIn) {
+        Uid = userIn.getUid();
+        this.phone_number = userIn.getPhone_number();
+        this.email = userIn.getEmail();
+        this.username = userIn.getUsername();
+        this.sports = userIn.isSports();
+        this.travel = userIn.isTravel();
+        this.music = userIn.isMusic();
+        this.fishing = userIn.isFishing();
+        this.description = userIn.getDescription();
+        this.sex = userIn.getSex();
+        this.preferSex = userIn.getPreferSex();
+        this.dateOfBirth = userIn.getDateOfBirth();
+        this.profileImageUrl = userIn.getProfileImageUrl();
+        this.latitude = userIn.getLatitude();
+        this.longtitude = userIn.getLongtitude();
+        this.aboutYou = userIn.getAboutYou();
+        this.jobTitle = userIn.getJobTitle();
+        this.company = userIn.getCompany();
+        this.school = userIn.getSchool();
+        this.dontShowMyAge = userIn.isDontShowMyAge();
+        this.makeMyDistanceInvisible = userIn.isMakeMyDistanceInvisible();
+    }
+
+    public User(String uid, String phone_number, String email, String username, boolean sports, boolean travel, boolean music, boolean fishing, String description, String sex, String preferSex, String dateOfBirth, String profileImageUrl, double latitude, double longtitude, String aboutYou, String jobTitle, String company, String school, boolean dontShowMyAge, boolean makeMyDistanceInvisible) {
+        Uid = uid;
         this.phone_number = phone_number;
         this.email = email;
         this.username = username;
-        this.sports = sport;
+        this.sports = sports;
         this.travel = travel;
         this.music = music;
-        this.fishing = fish;
+        this.fishing = fishing;
         this.description = description;
+        this.sex = sex;
         this.preferSex = preferSex;
         this.dateOfBirth = dateOfBirth;
         this.profileImageUrl = profileImageUrl;
         this.latitude = latitude;
         this.longtitude = longtitude;
+        this.aboutYou = aboutYou;
+        this.jobTitle = jobTitle;
+        this.company = company;
+        this.school = school;
+        this.dontShowMyAge = dontShowMyAge;
+        this.makeMyDistanceInvisible = makeMyDistanceInvisible;
     }
 
     public double getLatitude() {

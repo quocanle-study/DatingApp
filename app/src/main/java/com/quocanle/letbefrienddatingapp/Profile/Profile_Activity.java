@@ -14,15 +14,17 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
+import com.quocanle.letbefrienddatingapp.Firebase.FirebaseLoginHelper;
 import com.quocanle.letbefrienddatingapp.R;
 import com.quocanle.letbefrienddatingapp.Utils.PulsatorLayout;
 import com.quocanle.letbefrienddatingapp.Utils.TopNavigationViewHelper;
+import com.quocanle.letbefrienddatingapp.Utils.User;
 
 public class Profile_Activity extends AppCompatActivity {
     private static final String TAG = "Profile_Activity";
     private static final int ACTIVITY_NUM = 0;
     static boolean active = false;
-
+    private User user;
     private Context mContext = Profile_Activity.this;
     private ImageView imagePerson;
     private TextView name;
@@ -44,6 +46,12 @@ public class Profile_Activity extends AppCompatActivity {
         imagePerson = findViewById(R.id.circle_profile_image);
         name = findViewById(R.id.profile_name);
 
+        FirebaseLoginHelper.getInstance().getCurrentUser(new FirebaseLoginHelper.OnUserFetchedListener() {
+            @Override
+            public void onUserFetched(User user) {
+                name.setText(user.getUsername());
+            }
+        });
 
         ImageButton edit_btn = findViewById(R.id.edit_profile);
         edit_btn.setOnClickListener(new View.OnClickListener() {

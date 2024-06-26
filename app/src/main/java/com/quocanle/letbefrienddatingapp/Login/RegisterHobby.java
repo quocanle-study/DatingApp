@@ -7,10 +7,18 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.quocanle.letbefrienddatingapp.Firebase.FirebaseLoginHelper;
+import com.quocanle.letbefrienddatingapp.Firebase.FirestoreDatabaseHelper;
 import com.quocanle.letbefrienddatingapp.Main.MainActivity;
+import com.quocanle.letbefrienddatingapp.Profile.EditProfileActivity;
 import com.quocanle.letbefrienddatingapp.R;
 import com.quocanle.letbefrienddatingapp.Utils.User;
 
@@ -162,6 +170,31 @@ public class RegisterHobby extends AppCompatActivity {
         hobbiesContinueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                FirebaseLoginHelper firebaseLoginHelper = FirebaseLoginHelper.getInstance();
+//                firebaseLoginHelper.createAccount(userInfo.getEmail(), password, RegisterHobby.this, new OnCompleteListener<AuthResult>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<AuthResult> task) {
+//                        if (task.isSuccessful()) {
+//                            Toast.makeText(mContext, "Email already registered", Toast.LENGTH_SHORT).show();
+//                        } else {
+//                            Toast.makeText(mContext, "Email not registered", Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//                });
+//
+//                Log.d(TAG, "login" + firebaseLoginHelper.getUid());
+//
+//                firebaseLoginHelper.getCurrentUser(new FirebaseLoginHelper.OnUserFetchedListener() {
+//                    @Override
+//                    public void onUserFetched(User user) {
+//                        RegisterHobby.this.userInfo.setUid(user.getUid());
+//                    }
+//                });
+//
+//                Log.d(TAG, "login" + firebaseLoginHelper.getUid());
+//
+//                FirestoreDatabaseHelper firestoreDatabaseHelper = new FirestoreDatabaseHelper();
+//                firestoreDatabaseHelper.writeNewUser(userInfo.getUid(), userInfo);
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 finish();
 
