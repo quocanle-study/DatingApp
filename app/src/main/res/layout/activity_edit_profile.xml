@@ -322,6 +322,7 @@
                         android:textStyle="bold" />
 
                     <EditText
+                        android:id="@+id/ab_you"
                         android:layout_width="match_parent"
                         android:layout_height="70dp"
                         android:background="@android:color/transparent"
@@ -343,6 +344,7 @@
                         android:textStyle="bold" />
 
                     <EditText
+                        android:id="@+id/job_title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
@@ -365,6 +367,7 @@
                         android:textStyle="bold" />
 
                     <EditText
+                        android:id="@+id/company"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
@@ -387,6 +390,7 @@
                         android:textStyle="bold" />
 
                     <EditText
+                        android:id="@+id/school"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
@@ -475,6 +479,7 @@
                             android:textSize="18dp" />
 
                         <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/dont_show_my_age"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
@@ -502,6 +507,7 @@
                             android:textSize="18dp" />
 
                         <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/make_my_distance_invisible"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"

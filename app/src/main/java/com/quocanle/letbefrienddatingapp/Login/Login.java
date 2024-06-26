@@ -37,7 +37,7 @@ public class Login extends AppCompatActivity {
         mEmail = findViewById(R.id.input_email);
         mPassword = findViewById(R.id.input_password);
         mContext = Login.this;
-        firebaseLoginHelper = new FirebaseLoginHelper();
+        firebaseLoginHelper = FirebaseLoginHelper.getInstance();
 
 
         init();

@@ -3,7 +3,7 @@ package com.quocanle.letbefrienddatingapp.Utils;
 import java.io.Serializable;
 
 public class User implements Serializable {
-    private String user_id;
+    private String Uid;
     private String phone_number;
     private String email;
     private String username;
@@ -30,9 +30,9 @@ public class User implements Serializable {
     public User() {
     }
 
-    public User(String sex, String preferSex, String user_id, String phone_number, String email, String username, boolean sport, boolean travel, boolean music, boolean fish, String description, String dateOfBirth, String profileImageUrl, double latitude, double longtitude) {
+    public User(String sex, String preferSex, String Uid, String phone_number, String email, String username, boolean sport, boolean travel, boolean music, boolean fish, String description, String dateOfBirth, String profileImageUrl, double latitude, double longtitude) {
         this.sex = sex;
-        this.user_id = user_id;
+        this.Uid = Uid;
         this.phone_number = phone_number;
         this.email = email;
         this.username = username;
@@ -80,12 +80,12 @@ public class User implements Serializable {
         this.sex = sex;
     }
 
-    public String getUser_id() {
-        return user_id;
+    public String getUid() {
+        return Uid;
     }
 
-    public void setUser_id(String user_id) {
-        this.user_id = user_id;
+    public void setUid(String Uid) {
+        this.Uid = Uid;
     }
 
     public String getPhone_number() {
@@ -220,7 +220,7 @@ public class User implements Serializable {
     @Override
     public String toString() {
         return "User{" +
-                "user_id='" + user_id + '\'' +
+                "user_id='" + Uid + '\'' +
                 ", phone_number='" + phone_number + '\'' +
                 ", email='" + email + '\'' +
                 ", username='" + username + '\'' +
