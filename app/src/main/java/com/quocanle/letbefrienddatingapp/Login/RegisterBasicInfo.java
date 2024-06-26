@@ -14,11 +14,13 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.quocanle.letbefrienddatingapp.R;
+import com.quocanle.letbefrienddatingapp.Utils.GPS;
+import com.quocanle.letbefrienddatingapp.Utils.User;
 
 
 public class RegisterBasicInfo extends AppCompatActivity {
     private static final String TAG = "RegisterActivity";
-//    GPS gps;
+    GPS gps;
     private Context mContext;
     private String email, username, password;
     private EditText mEmail, mPassword, mUsername;
@@ -36,43 +38,43 @@ public class RegisterBasicInfo extends AppCompatActivity {
         mContext = RegisterBasicInfo.this;
         Log.d(TAG, "onCreate: started");
 
-//        gps = new GPS(getApplicationContext());
+        gps = new GPS(getApplicationContext());
 
         initWidgets();
-//        init();
+        init();
     }
 
-//    private void init() {
-//        btnRegister.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                email = mEmail.getText().toString();
-//                username = mUsername.getText().toString();
-//                password = mPassword.getText().toString();
-//
-//                if (checkInputs(email, username, password)) {
-//                    //find geo location
-//                    //find geo location
-//                    Location location = gps.getLocation();
-//                    double latitude = 37.349642;
-//                    double longtitude = -121.938987;
-//                    if (location != null) {
-//                        latitude = location.getLatitude();
-//                        longtitude = location.getLongitude();
-//                    }
-//                    Log.d("Location==>", longtitude + "   " + latitude);
-//
-//
-//                    Intent intent = new Intent(RegisterBasicInfo.this, RegisterGender.class);
-//                    User user = new User("", "", "", "", email, username, false, false, false, false, "", "", "", latitude, longtitude);
-//                    intent.putExtra("password", password);
-//                    intent.putExtra("classUser", user);
-//                    startActivity(intent);
-//                }
-//            }
-//        });
-//    }
+    private void init() {
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                email = mEmail.getText().toString();
+                username = mUsername.getText().toString();
+                password = mPassword.getText().toString();
+
+                if (checkInputs(email, username, password)) {
+                    //find geo location
+                    //find geo location
+                    Location location = gps.getLocation();
+                    double latitude = 37.349642;
+                    double longtitude = -121.938987;
+                    if (location != null) {
+                        latitude = location.getLatitude();
+                        longtitude = location.getLongitude();
+                    }
+                    Log.d("Location==>", longtitude + "   " + latitude);
+
+
+                    Intent intent = new Intent(RegisterBasicInfo.this, RegisterGender.class);
+                    User user = new User("", "", "", "", email, username, false, false, false, false, "", "", "", latitude, longtitude);
+                    intent.putExtra("password", password);
+                    intent.putExtra("classUser", user);
+                    startActivity(intent);
+                }
+            }
+        });
+    }
 
     private boolean checkInputs(String email, String username, String password) {
         Log.d(TAG, "checkInputs: checking inputs for null values.");

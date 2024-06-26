@@ -19,6 +19,13 @@ public class User implements Serializable {
     private double latitude;
     private double longtitude;
 
+    private String aboutYou;
+    private String jobTitle;
+    private String company;
+    private String school;
+    private boolean dontShowMyAge;
+    private boolean makeMyDistanceInvisible;
+
 
     public User() {
     }
@@ -162,6 +169,53 @@ public class User implements Serializable {
         this.dateOfBirth = dateOfBirth;
     }
 
+    public String getAboutYou() {
+        return aboutYou;
+    }
+
+    public void setAboutYou(String aboutYou) {
+        this.aboutYou = aboutYou;
+    }
+
+    public String getJobTitle() {
+        return jobTitle;
+    }
+
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
+    }
+
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
+    public String getSchool() {
+        return school;
+    }
+
+    public void setSchool(String school) {
+        this.school = school;
+    }
+
+    public boolean isDontShowMyAge() {
+        return dontShowMyAge;
+    }
+
+    public void setDontShowMyAge(boolean dontShowMyAge) {
+        this.dontShowMyAge = dontShowMyAge;
+    }
+
+    public boolean isMakeMyDistanceInvisible() {
+        return makeMyDistanceInvisible;
+    }
+
+    public void setMakeMyDistanceInvisible(boolean makeMyDistanceInvisible) {
+        this.makeMyDistanceInvisible = makeMyDistanceInvisible;
+    }
 
     @Override
     public String toString() {

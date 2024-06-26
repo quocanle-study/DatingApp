@@ -46,6 +46,10 @@
         <activity android:name=".Matched.ProfileCheckinMatched" />
         <activity android:name=".Profile.EditProfileActivity" />
         <activity android:name=".Profile.SettingsActivity" />
+        <activity android:name=".Login.RegisterGender" />
+        <activity android:name=".Login.RegisterAge" />
+        <activity android:name=".Login.RegisterGenderPrefection" />
+        <activity android:name=".Login.RegisterHobby" />
 
     </application>
 

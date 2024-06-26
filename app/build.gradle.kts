@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -60,6 +61,14 @@ allprojects {
 }
 
 dependencies {
+    implementation("com.google.firebase:firebase-database:20.0.3")
+
+    // Import the BoM for the Firebase platform
+    implementation(platform("com.google.firebase:firebase-bom:33.1.1"))
+
+    // Add the dependency for the Firebase Authentication library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation("com.google.firebase:firebase-auth")
     implementation("com.google.android.material:material:1.4.0")
 
     //noinspection GradleCompatible
@@ -83,6 +92,7 @@ dependencies {
 
     //glide for cache image
     implementation("com.github.bumptech.glide:glide:4.7.1")
+    implementation(libs.firebase.auth)
     annotationProcessor("com.github.bumptech.glide:compiler:4.7.1")
 
 
