@@ -40,7 +40,7 @@
                         android:paddingLeft="10dp"
                         android:paddingTop="10dp"
                         android:text="Show Me"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="18dp"
                         android:textStyle="bold" />
 
@@ -131,7 +131,7 @@
                         android:paddingLeft="10dp"
                         android:paddingTop="10dp"
                         android:text="Maximum Distance"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="18dp"
                         android:textStyle="bold" />
 
@@ -181,7 +181,7 @@
                         android:paddingLeft="10dp"
                         android:paddingTop="10dp"
                         android:text="Age Range"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="18dp"
                         android:textStyle="bold" />
 
@@ -205,6 +205,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="10dp"
+                        android:backgroundTint="@color/colorPrimary"
                         rsb:absoluteMaxValue="14"
                         rsb:absoluteMinValue="50" />
 
@@ -239,7 +240,7 @@
                         android:paddingLeft="10dp"
                         android:paddingTop="10dp"
                         android:text="Notification"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="18dp"
                         android:textStyle="bold" />
 
@@ -408,7 +409,7 @@
                         android:layout_height="match_parent"
                         android:padding="10dp"
                         android:text=" Legal"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="18dp" />
 
                     <TextView
@@ -483,7 +484,7 @@
                         android:gravity="center"
                         android:padding="10dp"
                         android:text=" Delete Account"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="18dp" />
 
                 </LinearLayout>
