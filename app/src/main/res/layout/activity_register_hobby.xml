@@ -20,30 +20,21 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="60dp"
+        android:layout_above="@+id/linearLayout4"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        android:layout_margin="20dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="90dp"
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/logo" />
-
-        <com.quocanle.letbefrienddatingapp.customfonts.MyTextView_GreatVibes_Regular
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="40dp"
-            android:text="Love Dating"
-            android:textColor="#ff0b00"
-            android:textSize="30dp" />
+            android:src="@drawable/image1"></ImageView>
 
     </RelativeLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -73,11 +64,10 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="16dp"
                 android:layout_weight="1"
-                android:background="#ff4081"
-                android:elevation="24dp"
-                android:text="SPORTS"
+                android:background="@color/colorPrimary"
+                android:text="Sports"
                 android:textColor="@android:color/white"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 android:textStyle="bold" />
 
             <Button
@@ -88,11 +78,11 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginRight="24dp"
                 android:layout_weight="1"
-                android:background="#ff4081"
+                android:background="@color/colorPrimary"
                 android:elevation="24dp"
                 android:text="TRAVEL"
                 android:textColor="@android:color/white"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -109,11 +99,11 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="16dp"
                 android:layout_weight="1"
-                android:background="#ff4081"
+                android:background="@color/colorPrimary"
                 android:elevation="24dp"
                 android:text="MUSIC"
                 android:textColor="@android:color/white"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 android:textStyle="bold" />
 
             <Button
@@ -124,12 +114,12 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginRight="24dp"
                 android:layout_weight="1"
-                android:background="#ff4081"
+                android:background="@color/colorPrimary"
                 android:elevation="24dp"
                 android:text="Fishing"
                 android:textColor="@android:color/white"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textSize="25sp"
+                android:textStyle="bold"/>
 
         </LinearLayout>
 
@@ -141,10 +131,11 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="24dp"
             android:background="#ff4081"
-            android:backgroundTint="#ff4081"
+            android:backgroundTint="@color/colorPrimary"
             android:elevation="24dp"
             android:onClick="onHobbyContinueClicked"
             android:text="Register"
+            android:textSize="20sp"
             android:textColor="@android:color/white"
             android:textStyle="bold" />
     </LinearLayout>

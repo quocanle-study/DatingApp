@@ -18,30 +18,22 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="60dp"
+        android:layout_above="@+id/linearLayout"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        android:layout_margin="20dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="70dp"
         android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/logo" />
 
-        <com.quocanle.letbefrienddatingapp.customfonts.MyTextView_GreatVibes_Regular
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="40dp"
-            android:text="Love Dating"
-            android:textColor="#ff0b00"
-            android:textSize="30dp" />
+            android:src="@drawable/image1"></ImageView>
 
     </RelativeLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -84,7 +76,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="24dp"
             android:background="#ff4081"
-            android:backgroundTint="#ff4081"
+            android:backgroundTint="@color/colorPrimary"
             android:elevation="24dp"
             android:text="Continue"
             android:textColor="@android:color/white"

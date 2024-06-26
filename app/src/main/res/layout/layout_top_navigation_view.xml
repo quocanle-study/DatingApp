@@ -9,7 +9,7 @@
             android:id="@+id/topNavViewBar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="bottom"
+
             app:menu="@menu/top_navigation_toolbar"
             android:background="@color/colorPrimary">
 

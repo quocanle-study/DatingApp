@@ -333,7 +333,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginTop="2dp"
-                        android:background="@color/colorAccent" />
+                        android:background="@color/colorPrimary" />
 
                     <com.quocanle.letbefrienddatingapp.customfonts.MyTextView_Roboto_Bold
                         android:layout_width="wrap_content"
@@ -356,7 +356,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginTop="2dp"
-                        android:background="@color/colorAccent" />
+                        android:background="@color/colorPrimary" />
 
                     <com.quocanle.letbefrienddatingapp.customfonts.MyTextView_Roboto_Bold
                         android:layout_width="wrap_content"
@@ -379,7 +379,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginTop="2dp"
-                        android:background="@color/colorAccent" />
+                        android:background="@color/colorPrimary" />
 
                     <com.quocanle.letbefrienddatingapp.customfonts.MyTextView_Roboto_Bold
                         android:layout_width="wrap_content"
@@ -402,7 +402,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginTop="2dp"
-                        android:background="@color/colorAccent" />
+                        android:background="@color/colorPrimary" />
 
                     <com.quocanle.letbefrienddatingapp.customfonts.MyTextView_Roboto_Bold
                         android:layout_width="wrap_content"
@@ -423,7 +423,7 @@
                             android:layout_centerVertical="true"
                             android:layout_margin="8dp"
                             android:text="Man"
-                            android:textColor="@color/colorAccent"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="18dp" />
 
                         <Button
